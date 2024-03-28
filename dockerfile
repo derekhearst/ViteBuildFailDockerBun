@@ -24,7 +24,7 @@ EXPOSE 3000/tcp
 ENTRYPOINT [ "bun", "run", "index.ts" ]
 
 
-## THIS WORKS THO?
+# # THIS WORKS THO?
 # FROM oven/bun:latest
 # WORKDIR /usr/src/app
 # COPY . .
@@ -32,12 +32,3 @@ ENTRYPOINT [ "bun", "run", "index.ts" ]
 # RUN bun run build
 # EXPOSE 3000
 # ENTRYPOINT [ "bun", "./build" ]
-
-
-# # FROM gplane/pnpm:latest
-# # WORKDIR /usr/src/app
-# # COPY . .
-# # RUN pnpm install
-# # RUN pnpm run build
-# # EXPOSE 3000
-# # ENTRYPOINT [ "node", "./build" ]
