@@ -13,7 +13,9 @@ RUN cd /temp/prod && bun install --frozen-lockfile --production
 FROM base as build
 COPY --from=install /temp/dev/node_modules node_modules
 COPY . .
-RUN bun --bun vite build 
+RUN bun --version
+# RUN bun prisma generate
+RUN bun vite build 
 # THIS BUILD FAILS FOR SOME REASON?!?!?!
 
 FROM base AS release
